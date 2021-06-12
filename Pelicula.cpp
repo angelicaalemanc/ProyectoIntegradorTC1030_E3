@@ -16,3 +16,18 @@ Pelicula::Pelicula(int Id, string Nombre,float DuracionH, string Genero, float C
   genero = Genero;
   calificacionPelicula = evaluar(CalificacionPelicula);
 }
+// Método set de la clase Pelicula
+float Pelicula::getCalificacionPelicula(){return calificacionPelicula;}
+// Otros métodos
+void Pelicula::print(){
+  cout << "Id: " << getId() <<endl;
+  cout << "Película: " << getNombre() <<endl;
+  cout << "Duración (h): " << getDuracionH() <<endl;
+  cout << "Género: " << getGenero() <<endl;
+  cout << "Calificación: " << getCalificacionPelicula() <<endl;
+  cout << "\n" << endl;
+}
+float Pelicula::evaluar(float CalificacionPelicula){
+  calificacionPelicula = CalificacionPelicula;
+  return calificacionPelicula;
+}
