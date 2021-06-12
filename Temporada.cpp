@@ -11,3 +11,22 @@ Temporada::Temporada(int NumeroTemp,float CalificacionTemp,vector<Episodio> Cont
   calificacionTemp = evaluar(CalificacionTemp);
   contenidoTemp = ContenidoTemp;
 }
+// Métodos setters de la clase Temporada
+void Temporada::setNumeroTemp(int NumeroTemp){numeroTemp = NumeroTemp;}
+// Métodos getters de la clase Temporada
+int Temporada::getNumeroTemp(){return numeroTemp;}
+float Temporada::getCalificacionTemp(){return calificacionTemp;}
+// Otros métodos
+void Temporada::enlistarEpisodio(vector <Episodio> Enlistar){
+  for(int i=0;i<Enlistar.size();i++){
+    contenidoTemp.push_back(Enlistar[i]);
+  }
+}
+float Temporada::evaluar(float CalificacionTemp){
+  calificacionTemp = CalificacionTemp;
+  return calificacionTemp;
+}
+int Temporada::tamanoTemp(){
+  int tam = contenidoTemp.size();
+  return tam;
+}
