@@ -30,3 +30,12 @@ int Temporada::tamanoTemp(){
   int tam = contenidoTemp.size();
   return tam;
 }
+
+void Temporada::printEp(){
+  cout << "Temporada " << numeroTemp << ": "<< endl;
+  for(int i=0;i<contenidoTemp.size();i++){
+    cout << "Episodio " << i+1 << ": ";
+    cout << contenidoTemp[i].getTituloEpisodio() << endl;
+  }
+  cout << "\n" << endl;
+}
