@@ -21,3 +21,20 @@ void Videoteca::agregarVideo(vector <Serie> Serie){
     videosSerie.push_back(Serie[i]);
   }
 }
+void Videoteca::agregarVideo(vector <Pelicula> Pelicula){
+  for(int i=0;i<Pelicula.size();i++){
+    videosPelicula.push_back(Pelicula[i]);
+  }
+}
+void Videoteca::enlistar(){
+  cout << "\nBienvenido a " << getNombreVideoteca() << endl;
+  cout << "\nCATÁLOGO DE PELÍCULAS: \n" << endl;
+  for(int i=0;i<videosPelicula.size();i++){
+    videosPelicula[i].print();
+  }
+ cout << "\nCATÁLOGO DE SERIES: \n" << endl;
+  for(int i=0;i<videosSerie.size();i++){
+    videosSerie[i].print();
+  }
+  cout << "\n" << endl;
+}
