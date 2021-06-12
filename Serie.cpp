@@ -24,3 +24,20 @@ float Serie::evaluar(){
   calificacionSerie = calificacionSerie/contenidoSerie.size();
   return calificacionSerie;
 }
+void Serie::print(){
+  int ep = 0;
+  for(int i =0; i<contenidoSerie.size();i++){
+    ep = ep + contenidoSerie[i].tamanoTemp();
+  }
+  cout << "Id: " << getId() <<endl;
+  cout << "Serie: " << getNombre() <<endl;
+  cout << "Duración (h): " << getDuracionH() <<endl;
+  cout << "Género: " << getGenero() <<endl;
+  cout << "Calificación: " << evaluar() <<endl;
+  cout << "Temporadas: " << contenidoSerie.size() <<endl;
+  cout << "Episodios Totales: " << ep <<endl;
+  cout << "\n" << endl;
+  for(int i =0; i<contenidoSerie.size();i++){
+    contenidoSerie[i].printEp();
+  }
+}
